@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,31 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Paleta de cores naturais do aplicativo
+				nature: {
+					50: '#f0f7f4',
+					100: '#dcebe3',
+					200: '#bad7c7',
+					300: '#8dbfa4',
+					400: '#5ea17e',
+					500: '#3d8b63',
+					600: '#2d6b4d',
+					700: '#25563f',
+					800: '#1f4535',
+					900: '#1c3a2e',
+				},
+				sage: {
+					50: '#f6f7f6',
+					100: '#e3e7e3',
+					200: '#c7d1c7',
+					300: '#a3b5a3',
+					400: '#7a957a',
+					500: '#5d7a5d',
+					600: '#496249',
+					700: '#3d513d',
+					800: '#334433',
+					900: '#2c3a2c',
 				}
 			},
 			borderRadius: {
@@ -84,11 +110,42 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'slide-in': {
+					'0%': {
+						transform: 'translateX(-100%)'
+					},
+					'100%': {
+						transform: 'translateX(0)'
+					}
+				},
+				'grow': {
+					'0%': {
+						transform: 'scale(0.8)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'scale(1)',
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'slide-in': 'slide-in 0.5s ease-out',
+				'grow': 'grow 0.4s ease-out'
 			}
 		}
 	},
