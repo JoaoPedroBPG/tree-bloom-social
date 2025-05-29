@@ -3,7 +3,9 @@ import React, { useState } from 'react';
 import LoginForm from '@/components/LoginForm';
 import SignupForm from '@/components/SignupForm';
 import FloatingElements from '@/components/FloatingElements';
-import { TreePine, Sprout, Users } from 'lucide-react';
+import { TreePine, Sprout, Users, ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -31,6 +33,12 @@ const Index = () => {
               <Users className="w-5 h-5" />
               <span className="text-sm font-medium">Comunidade Verde</span>
             </div>
+            <Link to="/posts">
+              <Button variant="outline" size="sm" className="border-nature-300 text-nature-700 hover:bg-nature-50">
+                Ver Posts
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
           </div>
         </div>
       </header>
@@ -65,6 +73,16 @@ const Index = () => {
                 <div className="text-2xl font-bold text-nature-700">200+</div>
                 <div className="text-sm text-sage-600">Espécies diferentes</div>
               </div>
+            </div>
+
+            {/* Call to action para ver posts */}
+            <div className="pt-4">
+              <Link to="/posts">
+                <Button className="bg-nature-500 hover:bg-nature-600 text-white px-6 py-3 text-lg">
+                  Explorar Comunidade
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
             </div>
           </div>
 
